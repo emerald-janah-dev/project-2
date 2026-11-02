@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+    <link rel="stylesheet" href="../styles/store-page.css">
+
+    <script src="../scripts/main-script.js" defer></script>
+    <script src="../scripts/cirqon-header.js" defer></script>
+    <script src="../scripts/product-page.js" defer></script>
+    <script src="../scripts/shop.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../img/design/logo.png">
+    <title>Cirqon</title>
+
+</head>
+
+<body>
+    <div id="cirqon-header-placeholder"></div>
+    <div id="cirqon-cart-placeholder"></div>
+    <div id="cirqon-storenav-placeholder"></div>
+    
+
+
+<!-- ---------------------------------------- -->
+
+
+<!--             PRODUCT PAGE                 -->
+
+
+<!-- ---------------------------------------- -->
+
+    <main class="product-page">
+
+        <!-- LEFT: Product information and attributes -->
+        <section class="product-main">
+
+            <div class="product-overview">
+                <div class="product-image">
+                    <img id="product_image" src="" alt="Product Image">
+                </div>
+
+                <div class="product-info">
+                    <div class="part-number">
+                        <h2 id="part_number">Loading...</h2>
+
+                <button class="copy-btn" onclick="copyPartNumber()" aria-label="Copy part number">
+                    <span class="copy-text">Copied to clipboard</span>
+                    <img src="../img/design/copy.png" alt="">
+                </button>
+                    </div>
+
+                    <p>Description: <span id="information">Loading...</span></p>
+                    <p>Manufacturer: <span id="manufacturer">Loading...</span></p>
+                    <p>Datasheet:
+                        <a id="datasheet" href="#" target="_blank" rel="noopener noreferrer">Datasheet</a>
+                    </p>
+                    <p>Mounting Type: <span id="mounting_type">Loading...</span></p>
+                    <p>Part Status: <span id="part_status">Loading...</span></p>
+                </div>
+            </div>
+
+            <!-- PRODUCT ATTRIBUTES -->
+            <section class="attributes">
+                <h2>
+                    <span class="attribute-icon"><img src="../img/design/box.png"></span>
+                    Product Attributes
+                </h2>
+
+                <table class="attributes-table">
+                    <tbody id="attributes-body"></tbody>
+                </table>
+            </section>
+
+        </section>
+
+        <!-- RIGHT: Purchase panel -->
+        <aside class="purchase-panel">
+
+            <p class="stock">In stock: <span id="stock">0</span></p>
+
+            <label for="quantity">Quantity</label>
+
+            <div class="quantity-control purchase-control">
+                <input type="number" id="quantity" value="1" min="1" max="112991">
+
+                <div class="quantity-buttons-shop">
+                    <button onclick="changeQuantity(1)" aria-label="Increase quantity">+</button>
+                    <button  onclick="changeQuantity(-1)" aria-label="Decrease quantity">−</button>
+                </div>
+            </div>
+
+            <p class="price">Price: $ <span id="price">0.00</span></p>
+
+            <div class="purchase-buttons">
+                <button class="buy-btn" onclick="window.location.href='checkout-page.html'"><img src="../img/design/buy.png" alt="">Buy</button>
+            <button class="cart-btn" id="add-to-cart-btn">
+                <img src="../img/design/shop.png" alt="">
+                <span>Add to cart</span>
+            </button>
+            </button>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <div id="cirqon-footer-placeholder"></div>
+
+</body>
+</html>

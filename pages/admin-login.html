@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/admin-pages.css">
+    <script src="../scripts/admin-pages.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../img/design/logo.png">
+    <title>Admin - Cirqon</title>
+</head>
+<body>
+
+    <main class="admin-login-page">
+
+        <!-- Left Panel -->
+        <section class="admin-brand-panel">
+
+            <div class="admin-brand">
+                <svg class="admin-brand-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3L19 6V11C19 15.5 16 19 12 21C8 19 5 15.5 5 11V6L12 3Z"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"/>
+                    <path d="M9 12L11 14L15 10"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+
+                <span>CirqOn - Admin Log-in</span>
+            </div>
+
+            <div class="admin-brand-message">
+                <h1>Administration Console</h1>
+                <p>
+                    Manage item, content and settings. Access is restricted to
+                    authorized staff.
+                </p>
+            </div>
+
+            <footer class="admin-brand-footer">
+                © CirqOn. All activity on this console is logged.
+            </footer>
+
+        </section>
+
+        <!-- Right Panel -->
+        <section class="admin-form-panel">
+
+            <div class="admin-login-card">
+
+                <header class="admin-card-header">
+                    <h2>Admin Sign-in</h2>
+                    <p>Enter your credentials to continue.</p>
+                </header>
+
+                <form class="admin-login-form" id="admin-login-form">
+
+                    <div class="admin-form-group">
+                        <label for="admin-email">Email address</label>
+                        <input
+                            type="email"
+                            id="admin-email"
+                            name="email"
+                            placeholder="admin@company.com"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="admin-form-group">
+                        <div class="admin-password-heading">
+                            <label for="admin-password">Password</label>
+                            <a href="#" class="admin-forgot-link">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <input
+                            type="password"
+                            id="admin-password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <label class="admin-remember-option">
+                        <input type="checkbox" name="remember">
+                        <span>Keep me signed in on this device</span>
+                    </label>
+
+                    <button type="submit" class="admin-sign-in-button">
+                        Sign in
+                    </button>
+
+                </form>
+
+                <p class="admin-access-note">
+                    Need access? Contact your system administrator.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="admin-login.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+    <link rel="stylesheet" href="../styles/store-page.css">
+    <link rel="stylesheet" href="../styles/dashboard-page.css">
+    <link rel="stylesheet" href="../styles/cart-check-order.css">
+
+    <script src="../scripts/main-script.js" defer></script>
+    <script src="../scripts/cirqon-header.js" defer></script>
+    <script src="../scripts/product-page.js" defer></script>
+    <script src="../scripts/shop.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <script src="../scripts/example-product.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../img/design/logo.png">
+    <title>Cirqon</title>
+</head>
+<body>
+    <div id="cirqon-header-placeholder"></div>
+    <div id="cirqon-cart-placeholder"></div>
+    <div id="cirqon-storenav-placeholder"></div>
+
+    <main class="checkout-page">
+
+        <div class="checkout-titles">
+            <div class="cart-window"><img src="../img/design/basket.png" alt="Cart">Cart</div>
+            <div class="checkout-window" ><img src="../img/design/truck.png" alt="Checkout">Checkout</div>
+            <div class="order-window"><img src="../img/design/check-2.png" alt="Order Complete">Order Complete</div>
+        </div>
+
+
+        <!-- Main Checkout Container -->
+        <div class="checkout-container">
+
+            <!-- Shipping Information -->
+            <section class="shipping-information">
+
+                <p class="section-title">Shipping Information</p>
+
+                <form id="checkout-form">
+
+                    <div class="name-fields">
+                        <input type="text" name="firstName" placeholder="First Name">
+
+                        <input type="text" name="lastName" placeholder="Last Name">
+                    </div>
+
+                    <input type="text" name="city" placeholder="City/Province">
+
+                    <input type="text" name="town" placeholder="Town">
+
+                    <input type="text" name="address"  placeholder="St. Address">
+
+                    <input type="email" name="email"  placeholder="Email Address"  >
+
+                    <div class="contact-fields">
+                        <input type="tel" name="phone"  placeholder="Phone Number"  >
+
+                        <input type="text" name="zip" placeholder="ZIP Code">
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!-- Billing Information -->
+            <section class="billing-information">
+
+                <p class="section-title">Billing Information</p>
+
+                <div class="order-card">
+
+                    <div class="order-heading">
+                        Your Order
+                    </div>
+
+                    <div class="order-details">
+
+                        <div class="order-table-heading">
+                            <span>Product</span>
+                            <span>Subtotal</span>
+                        </div>
+
+                        <div id="checkout-products">
+                            <!-- Products will be inserted here -->
+                            <div class="order-product">
+                                <span>1N4001 × 10 pcs</span>
+                                <span>$ 9.00</span>
+                            </div>
+
+                            <div class="order-product">
+                                <span>1N825A × 10 pcs</span>
+                                <span>$ 3.20</span>
+                            </div>
+                        </div>
+
+                        <div class="shipment-section">
+
+                            <p class="shipment-title">Shipment</p>
+
+                            <div class="shipping-options">
+
+                                <label>
+                                    <input type="radio" name="delivery" value="2.40" checked>
+                                    <span>Regular Shipping:</span>
+                                    <span>$ 2.40</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="delivery" value="7.90">
+                                    <span>Same-day Delivery:</span>
+                                    <span>$ 7.90</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="delivery" value="0">
+                                    <span>Store Pickup: 7 AM - 9 PM</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="order-total">
+                            <span>Total</span>
+                            <span id="checkout-total">$ 14.60</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Payment Options -->
+                    <div class="payment-section">
+
+                        <div class="payment-options">
+
+                            <label>
+                                <input type="radio" name="payment" value="pickup" required>
+                                Cash on Pickup
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment" value="card">
+                                Credit Card/Debit Card
+                            </label>
+
+                            <label>
+                                <input type="radio" name="payment" value="gcash">
+                                Gcash
+                            </label>
+
+                        </div>
+
+                        <p class="privacy-text">
+                            Your personal data will be used to process your
+                            order, support your experience throughout this
+                            website, and for other purposes described in our
+                            privacy policy.
+                        </p>
+
+                        <label class="terms-option">
+                            <input type="checkbox" id="terms" required>
+                            <span>
+                                I have read and agree to the website terms
+                                and conditions
+                            </span>
+                        </label>
+
+                        <div class="checkout-actions">
+
+                            <button type="button" class="back-button" onclick="window.location.href='cart-page.html'">
+                                Back to cart
+                            </button>
+
+                            <button class="place-order-button" onclick="window.location.href='order-page.html'">
+                                Place order
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>       
+
+    <div id="cirqon-footer-placeholder"></div> 
+    
+</body>
+</html>

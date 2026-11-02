@@ -1,0 +1,569 @@
+
+/* ========================================
+TOP SALE & COMPONENTS
+======================================== */
+
+.topsale,
+.components {
+    width: 100%;
+    min-height: 300px;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg) clamp(20px, 4vw, 58px);
+    box-sizing: border-box;
+}
+
+.components,
+.news,
+.lessons {
+    margin-top: 0;
+    padding-left: clamp(20px, 4vw, 58px);
+    padding-right: clamp(20px, 4vw, 58px);
+}
+
+.topsale p,
+.components p,
+.news p,
+.lessons p {
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
+    color: var(--text-color);
+}
+
+.topsale p {
+    margin-left: var(--spacing-sm);
+}
+
+.components p {
+    margin-bottom: var(--spacing-lg);
+    margin-left: var(--spacing-sm);
+}
+
+/* ========================================
+TOP SALE CAROUSEL
+======================================== */
+
+.topsale {
+    position: relative;
+}
+
+.topsale .display {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.topsale .display::-webkit-scrollbar {
+    display: none;
+}
+
+.topsale .display img {
+    height: clamp(180px, 22vw, 290px);
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: clamp(35px, 3.5vw, 45px);
+    height: clamp(35px, 3.5vw, 45px);
+
+    border: none;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--primary-color);
+    font-size: var(--text-lg);
+    cursor: pointer;
+
+    box-shadow: var(--shadow-sm);
+    transition: background var(--transition-normal),
+                color var(--transition-normal);
+}
+
+.arrow:hover {
+    background: var(--accent-color);
+    color: var(--white);
+}
+
+.arrow.left {
+    left: var(--spacing-md);
+}
+
+.arrow.right {
+    right: var(--spacing-md);
+}
+
+/* ========================================
+NEWS SECTION
+======================================== */
+
+.news-section {
+    background: linear-gradient(
+        to bottom,
+        var(--white) 0 60%,
+        var(--accent-color) 60% 100%
+    );
+}
+
+.news {
+    width: var(--container-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.news-images {
+    display: flex;
+    gap: var(--spacing-lg);
+    width: 100%;
+    animation: slide 16s infinite;
+}
+
+.news-images a {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.news-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+}
+
+/* News animation */
+
+@keyframes slide {
+    0%, 20% {
+        transform: translateX(0);
+    }
+
+    25%, 45% {
+        transform: translateX(calc(-100% - var(--spacing-lg)));
+    }
+
+    50%, 70% {
+        transform: translateX(calc(-200% - var(--spacing-lg) * 2));
+    }
+
+    75%, 95% {
+        transform: translateX(calc(-300% - var(--spacing-lg) * 3));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+LESSONS SECTION
+======================================== */
+
+.lessons {
+    background: var(--accent-color);
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(20px, 5vw, 80px);
+    margin: 0;
+    grid-auto-rows: minmax(520px, auto);
+    padding-bottom: var(--spacing-lg);
+}
+
+/* ========================================
+COURSE CARDS
+======================================== */
+
+.card {
+    background: var(--light-gray);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+
+    box-shadow: var(--shadow-sm);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: background var(--transition-normal);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: clamp(180px, 18vw, 245px);
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.card h3 {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: clamp(22px, 2vw, 28px);
+    line-height: 1.1;
+    margin: var(--spacing-sm) 0 var(--spacing-xs);
+}
+
+.card .teacher,
+.card .school {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: var(--text-lg);
+    line-height: 1.2;
+    margin: 0 0 var(--spacing-xs);
+    color: var(--text-color);
+    padding: 0;
+}
+
+.card .teacher {
+    margin-top: auto;
+    padding-top: var(--spacing-xs);
+}
+
+.card .school {
+    font-size: var(--text-sm);
+    margin-bottom: 0;
+}
+
+.card .paragraph {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--font-secondary);
+    font-size: var(--text-sm);
+    color: var(--text-color);
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.4s ease,
+        margin 0.4s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .paragraph {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: var(--spacing-xs);
+}
+
+/* Individual course hover colors */
+
+#course1:hover {
+    background: var(--accent-darker);
+}
+
+#course2:hover {
+    background: #497899;
+}
+
+#course3:hover {
+    background: #246F68;
+}
+
+#course4:hover {
+    background: #7D7E28;
+}
+
+#course5:hover {
+    background: #A43232;
+}
+
+#course6:hover {
+    background: #314D68;
+}
+
+.card:hover h3,
+.card:hover .paragraph,
+.card:hover .teacher,
+.card:hover .school {
+    color: var(--white);
+}
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer {
+    background: var(--white);
+}
+
+/* ========================================
+RESPONSIVE DESIGN
+======================================== */
+
+/* ========================================
+1200px - SMALL DESKTOP / LAPTOP
+======================================== */
+
+@media (max-width: 1200px) {
+
+    .topsale,
+    .components {
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+
+    .course-grid {
+        gap: var(--spacing-lg);
+        grid-auto-rows: minmax(480px, auto);
+    }
+
+    .card {
+        padding: var(--spacing-sm);
+    }
+
+    .card img {
+        height: 210px;
+    }
+
+    .card h3 {
+        font-size: var(--text-lg);
+    }
+}
+
+/* ========================================
+   900px - TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .topsale,
+    .components {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
+    .topsale .display img {
+        height: 230px;
+    }
+
+    .arrow\.left {
+        left: var(--spacing-xs);
+    }
+
+    .arrow\.right {
+        right: var(--spacing-xs);
+    }
+
+    .news {
+        width: 95%;
+    }
+
+    .news-images {
+        gap: var(--spacing-md);
+    }
+
+    @keyframes slide {
+        0%, 20% {
+            transform: translateX(0);
+        }
+
+        25%, 45% {
+            transform: translateX(calc(-100% - var(--spacing-md)));
+        }
+
+        50%, 70% {
+            transform: translateX(calc(-200% - var(--spacing-md) * 2));
+        }
+
+        75%, 95% {
+            transform: translateX(calc(-300% - var(--spacing-md) * 3));
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-md);
+        grid-auto-rows: minmax(450px, auto);
+    }
+
+    .card img {
+        height: 220px;
+    }
+}
+
+/* ========================================
+   600px - MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .topsale,
+    .components {
+        min-height: auto;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .topsale p,
+    .components p,
+    .news p,
+    .lessons p {
+        font-size: var(--text-lg);
+    }
+
+    .topsale p,
+    .components p {
+        margin-left: var(--spacing-xs);
+    }
+
+    .components p {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .topsale .display img {
+        height: 180px;
+    }
+
+    .arrow {
+        width: 32px;
+        height: 32px;
+        font-size: var(--text-md);
+    }
+
+    .arrow.left {
+        left: 0;
+    }
+
+    .arrow.right {
+        right: 0;
+    }
+
+    .news {
+        width: 95%;
+    }
+
+    .news-images {
+        gap: var(--spacing-sm);
+    }
+
+    @keyframes slide {
+        0%, 20% {
+            transform: translateX(0);
+        }
+
+        25%, 45% {
+            transform: translateX(calc(-100% - var(--spacing-sm)));
+        }
+
+        50%, 70% {
+            transform: translateX(calc(-200% - var(--spacing-sm) * 2));
+        }
+
+        75%, 95% {
+            transform: translateX(calc(-300% - var(--spacing-sm) * 3));
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .lessons {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        grid-auto-rows: auto;
+    }
+
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    .card img {
+        height: clamp(180px, 55vw, 260px);
+    }
+
+    .card h3 {
+        font-size: var(--text-xl);
+    }
+
+    .card .teacher {
+        margin-top: var(--spacing-sm);
+    }
+
+    .card .paragraph {
+        max-height: none;
+        opacity: 1;
+        margin-top: var(--spacing-xs);
+    }
+}
+
+/* ========================================
+   380px - SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .topsale,
+    .components {
+        padding-left: var(--spacing-xs);
+        padding-right: var(--spacing-xs);
+    }
+
+    .topsale .display img {
+        height: 150px;
+    }
+
+    .topsale p,
+    .components p,
+    .news p,
+    .lessons p {
+        font-size: var(--text-md);
+    }
+
+    .arrow {
+        width: 28px;
+        height: 28px;
+        font-size: var(--text-sm);
+    }
+
+    .news {
+        width: 100%;
+    }
+
+    .news-images img {
+        border-radius: var(--radius-md);
+    }
+
+    .lessons {
+        padding-left: var(--spacing-xs);
+        padding-right: var(--spacing-xs);
+    }
+
+    .card {
+        padding: var(--spacing-sm);
+    }
+
+    .card img {
+        height: 170px;
+    }
+
+    .card h3 {
+        font-size: var(--text-lg);
+    }
+}

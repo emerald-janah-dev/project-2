@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/admin-pages.css">
+    <script src="../scripts/admin-pages.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../img/design/logo.png">
+    <title>Admin - Cirqon</title>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="admin-dashboard.html" aria-label="Cirqon admin home">
+            <p>Cirq<span>On</span> </p>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#top-sales" data-admin-view="top-sales">Top Sales</a>
+            <a href="#news" data-admin-view="news">News</a>
+            <a href="#courses" data-admin-view="courses">Free Courses</a>
+            <a class="active" href="#components" data-admin-view="components" aria-current="page">Components</a>
+        </nav>
+        <div class="account-nav">
+            <span>Admin</span>
+            <a href="admin-login.html">Sign out</a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div id="components-view">
+        <section class="page-heading" aria-labelledby="page-title">
+            <div>
+                <h1 id="page-title">Components</h1>
+                <p>Electronic parts listed for sale. Add, edit or remove items in the database.</p>
+            </div>
+            <button class="primary-button" id="add-component-button" type="button">+ Add component</button>
+        </section>
+
+        <section class="toolbar" aria-label="Filter components">
+            <label class="sr-only" for="component-search">Search part number or description</label>
+            <input id="component-search" class="search-input" type="search" placeholder="Search part number or description">
+            <div class="category-filters" id="category-filters" aria-label="Categories"></div>
+        </section>
+
+        <section class="table-card" aria-label="Component inventory">
+            <div class="bulk-actions" id="bulk-actions" hidden>
+                <span id="selection-count">0 selected</span>
+                <button class="text-button delete-text" id="delete-selected-button" type="button">Delete selected</button>
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="check-column"><input id="select-all" type="checkbox" aria-label="Select all components"></th>
+                            <th>Part number</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Package</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="component-rows"></tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <p id="results-summary" aria-live="polite"></p>
+                <div class="pagination">
+                    <button class="secondary-button" id="previous-page" type="button">Previous</button>
+                    <button class="secondary-button" id="next-page" type="button">Next</button>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="content-manager" id="content-manager" hidden>
+            <div class="page-heading">
+                <div>
+                    <h1 id="manager-title"></h1>
+                    <p id="manager-description"></p>
+                </div>
+                <button class="primary-button" id="add-record-button" type="button"></button>
+            </div>
+            <div class="toolbar manager-toolbar">
+                <label class="sr-only" for="record-search">Search records</label>
+                <input id="record-search" class="search-input" type="search" placeholder="Search records">
+            </div>
+            <section class="table-card" aria-label="Managed records">
+                <div class="table-scroll">
+                    <table>
+                        <thead id="record-head"></thead>
+                        <tbody id="record-rows"></tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <p id="record-summary" aria-live="polite"></p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <dialog class="component-dialog" id="component-dialog" aria-labelledby="dialog-title">
+        <form id="component-form">
+            <div class="dialog-heading">
+                <div>
+                    <h2 id="dialog-title">Add component</h2>
+                    <p>Enter the component details below.</p>
+                </div>
+                <button class="icon-button" id="close-dialog-button" type="button" aria-label="Close dialog">&times;</button>
+            </div>
+            <input id="component-id" type="hidden">
+            <div class="form-grid">
+                <label>Part number
+                    <input id="part-number" name="partNumber" required maxlength="60">
+                </label>
+                <label>Category
+                    <select id="component-category" name="category" required></select>
+                </label>
+                <label class="field-wide">Description
+                    <input id="component-description" name="description" required maxlength="120">
+                </label>
+                <label>Package
+                    <input id="component-package" name="package" required maxlength="40">
+                </label>
+                <label>Price
+                    <input id="component-price" name="price" type="number" min="0" step="0.01" required>
+                </label>
+                <label>Stock quantity
+                    <input id="component-stock" name="stock" type="number" min="0" step="1" required>
+                </label>
+            </div>
+            <div class="dialog-actions">
+                <button class="secondary-button" id="cancel-dialog-button" type="button">Cancel</button>
+                <button class="primary-button" type="submit">Save component</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog class="component-dialog" id="record-dialog" aria-labelledby="record-dialog-title">
+        <form id="record-form">
+            <div class="dialog-heading">
+                <div>
+                    <h2 id="record-dialog-title"></h2>
+                    <p>Enter the details below.</p>
+                </div>
+                <button class="icon-button" id="close-record-dialog" type="button" aria-label="Close dialog">&times;</button>
+            </div>
+            <input id="record-id" type="hidden">
+            <div class="form-grid" id="record-fields"></div>
+            <div class="dialog-actions">
+                <button class="secondary-button" id="cancel-record-dialog" type="button">Cancel</button>
+                <button class="primary-button" type="submit">Save record</button>
+            </div>
+        </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

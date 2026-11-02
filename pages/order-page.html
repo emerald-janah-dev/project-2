@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+    <link rel="stylesheet" href="../styles/store-page.css">
+    <link rel="stylesheet" href="../styles/dashboard-page.css">
+    <link rel="stylesheet" href="../styles/cart-check-order.css">
+
+    <script src="../scripts/main-script.js" defer></script>
+    <script src="../scripts/cirqon-header.js" defer></script>
+    <script src="../scripts/product-page.js" defer></script>
+    <script src="../scripts/shop.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <script src="../scripts/example-product.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../img/design/logo.png">
+    <title>Cirqon</title>
+</head>
+<body>
+    <div id="cirqon-header-placeholder"></div>
+    <div id="cirqon-cart-placeholder"></div>
+
+    <div class="store-nav order-home">
+        <a href="dashboard-page.html" class="back-btn" aria-label="Go back to dashboard">
+            <svg class="home-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="currentColor">
+
+                <path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z"
+                    stroke-width="1.5"/>
+
+                <path d="M15 18H9"
+                    stroke-width="1.5"
+                    stroke-linecap="round"/>
+            </svg>
+        </a>
+    </div>
+
+    <main class="order-page">
+
+        <div class="order-titles">
+            <div class="cart-window"><img src="../img/design/basket.png" alt="Cart">Cart</div>
+            <div class="checkout-window" ><img src="../img/design/truck.png" alt="Checkout">Checkout</div>
+            <div class="order-window"><img src="../img/design/check-2.png" alt="Order Complete">Order Complete</div>
+        </div>
+
+        <div class="order-complete-page">
+            <!-- Order Confirmation -->
+            <div class="confirmation">
+                <svg class="confirmation-icon"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                    <circle cx="16" cy="16" r="13"
+                            stroke="#10720d" stroke-width="2.5"/>
+
+                    <path d="M9.5 16L14 20.5L22.5 11.5"
+                            stroke="#10720d"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                </svg>
+
+                <h1>Your order has been received</h1>
+            </div>
+
+            <section class="ordered-products">
+
+                <h2 class="product-heading">Product</h2>
+
+                <div class="product-list">
+
+                    <!-- Product 1 -->
+                    <div class="ordered-product">
+
+                        <img src="../img/design/check-2.png" alt="" class="check-img">
+
+                        <img class="product-image-order" src="../img/products/diode-1.png" alt="1N4001">
+
+                        <span class="product-name">1N4001</span>
+
+                        <a class="datasheet-link" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6380/1N4001-1.pdf" target="_blank">
+                            Datasheet
+                        </a>
+
+                        <span class="product-quantity">10 pcs</span>
+
+                        <span class="product-price">$ 9.00</span>
+
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="ordered-product">
+
+                        <img src="../img/design/check-2.png" alt="" class="check-img">
+
+                        <img class="product-image-order" src="../img/products/diode-2.png" alt="1N825A">
+
+                        <span class="product-name">1N825A</span>
+
+                        <a class="datasheet-link" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/1881/1N821_1N829A-1_DO-35.pdf" target="_blank">
+                            Datasheet
+                        </a>
+
+                        <span class="product-quantity">10 pcs</span>
+
+                        <span class="product-price">$ 3.20</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Customer Information -->
+            <section class="customer-information">
+
+                <p>Aaron Gerente</p>
+                <p>Ø55 A. De Jesus St. Poblacion Plaridel Bulacan, 3004</p>
+                <p>aarongerente1@gmail.com</p>
+                <p>09056650282</p>
+
+            </section>
+
+
+        </div>
+    </main>
+
+    <div id="cirqon-footer-placeholder"></div> 
+    
+</body>
+</html>

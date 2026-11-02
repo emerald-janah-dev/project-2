@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main-style.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+    <link rel="stylesheet" href="../styles/store-page.css">
+    <link rel="stylesheet" href="../styles/dashboard-page.css">
+    <link rel="stylesheet" href="../styles/cart-check-order.css">
+
+    <script src="../scripts/main-script.js" defer></script>
+    <script src="../scripts/cirqon-header.js" defer></script>
+    <script src="../scripts/product-page.js" defer></script>
+    <script src="../scripts/shop.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <script src="../scripts/example-product.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../img/design/logo.png">
+    <title>Cirqon</title>
+</head>
+<body>
+    <div id="cirqon-header-placeholder"></div>
+    <div id="cirqon-cart-placeholder"></div>
+    <div id="cirqon-storenav-placeholder"></div>
+
+    <main class="cart-page">
+        <div class="cart-titles">
+            <div class="cart-window"><img src="../img/design/basket.png" alt="Cart">Cart</div>
+            <div class="checkout-window" ><img src="../img/design/truck.png" alt="Checkout">Checkout</div>
+            <div class="order-window"><img src="../img/design/check-2.png" alt="Order Complete">Order Complete</div>
+        </div>
+
+
+        <div class="cart-container">
+
+            <!-- Left: Cart Products -->
+            <div class="cart-products">
+
+                <div class="cart-table-header">
+                    <span class="product-title">Product</span>
+                    <span>Price</span>
+                    <span>Quantity</span>
+                    <span>Subtotal</span>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="cart-item" data-price="0.90">
+
+                    <button class="remove-item" aria-label="Remove product">×</button>
+
+                    <div class="cart-product">
+                        <img src="../img/products/diode-1.png" alt="1N4001 diode">
+                        <span>1N4001</span>
+                    </div>
+
+                    <span class="product-price">$ 0.90</span>
+
+                    <div class="quantity-control">
+                        <button class="minus" aria-label="Decrease quantity">−</button>
+                        <input type="number" value="0" min="0" step="1">
+                        <button class="plus" aria-label="Increase quantity">+</button>
+                    </div>
+
+                    <span class="product-subtotal">$ 0.00</span>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="cart-item" data-price="0.32">
+
+                    <button class="remove-item" aria-label="Remove product">×</button>
+
+                    <div class="cart-product">
+                        <img src="../img/products/diode-2.png" alt="1N825A diode">
+                        <span>1N825A</span>
+                    </div>
+
+                    <span class="product-price">$ 0.32</span>
+
+                    <div class="quantity-control">
+                        <button class="minus" aria-label="Decrease quantity">−</button>
+                        <input type="number" value="0" min="0" step="1">
+                        <button class="plus" aria-label="Increase quantity">+</button>
+                    </div>
+
+                    <span class="product-subtotal">$ 0.00</span>
+                </div>
+
+            </div>
+
+            <!-- Right: Cart Total -->
+            <div class="cart-summary">
+
+                <div class="summary-header">Cart Total</div>
+
+                <div class="summary-content">
+
+                    <div class="summary-subtotal">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$ 0.00</span>
+                    </div>
+
+                    <div class="shipping-section">
+
+                        <span class="shipping-title">Shipment</span>
+
+                        <div class="shipping-options">
+
+                            <label>
+                                <input type="radio" name="shipping"
+                                value="2.40" checked>
+                                <span>Regular Shipping:</span>
+                                <span>$ 2.40</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="shipping"
+                                    value="7.90">
+                                <span>Same-day Delivery:</span>
+                                <span>$ 7.90</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="shipping"
+                                    value="0">
+                                <span>Store Pickup: 7 AM - 9 PM</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="cart-total">$ 2.40</span>
+                    </div>
+
+                    <button class="proceed-checkout" onclick="window.location.href='checkout-page.html'">
+                        <img src="../img/design/truck.png" alt="">
+                        <span>Proceed to Checkout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="cirqon-footer-placeholder"></div>  
+    
+</body>
+</html>

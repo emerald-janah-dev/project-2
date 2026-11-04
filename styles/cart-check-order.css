@@ -510,7 +510,7 @@
 
 .order-details {
     padding: 17px clamp(15px, 2.5vw, 34px) 0;
-    background: var(--accent-darker);
+    background: var(--accent-lighter);
     color: var(--white);
     font-size: var(--text-xs);
 }

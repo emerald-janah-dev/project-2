@@ -11,7 +11,6 @@ TOP SALE & COMPONENTS
 .components {
     width: 100%;
     min-height: 300px;
-    margin-top: 1000px;;
     padding: var(--spacing-lg) clamp(20px, 4vw, 58px);
     box-sizing: border-box;
 }

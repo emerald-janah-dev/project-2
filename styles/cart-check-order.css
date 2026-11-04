@@ -46,7 +46,7 @@
 :is(.cart-page, .checkout-page, .order-page) {
     font-family: var(--font-main);
     width: var(--page-width);
-    margin: auto auto 3%;
+    margin: 0 auto 3%;
     min-width: 0;
 }
 

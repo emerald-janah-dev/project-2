@@ -372,14 +372,14 @@
 
     border: 1px solid var(--line);
     border-radius: 50%;
-    background: #707070;
+    background: #ffffff;
     flex-shrink: 0;
     cursor: pointer;
 }
 
 .shipping-options input:checked {
     border: 3px solid var(--accent-color);
-    background: var(--accent-darker);
+    background: var(--accent-ligther);
 }
 
 

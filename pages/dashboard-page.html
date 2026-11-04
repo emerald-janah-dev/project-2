@@ -26,98 +26,102 @@
     <div id="cirqon-header-placeholder"></div>
     <div id="cirqon-cart-placeholder"></div>
 
-    <div class="topsale">
-        <p>Top Sale ></p>
+    <main class="dashboard-page">
+         <div class="topsale">
+            <p>Top Sale ></p>
 
-        <div class="slider">
-            <button class="arrow left" onclick="scrollProducts(-1)">&#10094;</button>
+            <div class="slider">
+                <button class="arrow left" onclick="scrollProducts(-1)">&#10094;</button>
 
-            <div class="display" id="productDisplay">
-                <img src="../img/design/top-sale.png" alt="Product 1">
-            </div>
+                <div class="display" id="productDisplay">
+                    <img src="../img/design/top-sale.png" alt="Product 1">
+                </div>
 
-            <button class="arrow right" onclick="scrollProducts(1)">&#10095;</button>
-        </div>
-    </div>
-
-    <div class="components">
-        <div class="buttons">
-            <button onclick="window.location.href='shop-page.html?category=diodes'">Diodes</button>
-            <button onclick="window.location.href='shop-page.html?category=resistors'">Resistors</button>
-            <button onclick="window.location.href='shop-page.html?category=capacitors'">Capacitors</button>
-            <button onclick="window.location.href='shop-page.html?category=transistors'">Transistors</button>
-            <button onclick="window.location.href='shop-page.html?category=microchips'">Microchips</button>
-            <button onclick="window.location.href='shop-page.html?category=inductors'">Inductors</button>
-            <button onclick="window.location.href='shop-page.html?category=logic-gates'">Logic Gates</button>
-            <button onclick="window.location.href='shop-page.html?category=microcontrollers'">Microcontrollers</button>
-        </div>
-    </div>
-
-    <div class="news-section">
-        <div class="news">
-            <p>News ></p>
-
-            <div class="news-images">
-                <a href="https://www.google.com" target="_blank"><img src="../img/design/news (1).png" alt="News-1"></a>
-                <a href="https://www.google.com" target="_blank"><img src="../img/design/news (2).png" alt="News-2"></a>
-                <a href="https://www.google.com" target="_blank"><img src="../img/design/news (3).png" alt="News-3"></a>
-                <a href="https://www.google.com" target="_blank"><img src="../img/design/news (4).png" alt="News-4"></a>
+                <button class="arrow right" onclick="scrollProducts(1)">&#10095;</button>
             </div>
         </div>
-    </div>
+
+        <div class="components">
+            <div class="buttons">
+                <button onclick="window.location.href='shop-page.html?category=diodes'">Diodes</button>
+                <button onclick="window.location.href='shop-page.html?category=resistors'">Resistors</button>
+                <button onclick="window.location.href='shop-page.html?category=capacitors'">Capacitors</button>
+                <button onclick="window.location.href='shop-page.html?category=transistors'">Transistors</button>
+                <button onclick="window.location.href='shop-page.html?category=microchips'">Microchips</button>
+                <button onclick="window.location.href='shop-page.html?category=inductors'">Inductors</button>
+                <button onclick="window.location.href='shop-page.html?category=logic-gates'">Logic Gates</button>
+                <button onclick="window.location.href='shop-page.html?category=microcontrollers'">Microcontrollers</button>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <div class="news">
+                <p>News ></p>
+
+                <div class="news-images">
+                    <a href="https://www.google.com" target="_blank"><img src="../img/design/news (1).png" alt="News-1"></a>
+                    <a href="https://www.google.com" target="_blank"><img src="../img/design/news (2).png" alt="News-2"></a>
+                    <a href="https://www.google.com" target="_blank"><img src="../img/design/news (3).png" alt="News-3"></a>
+                    <a href="https://www.google.com" target="_blank"><img src="../img/design/news (4).png" alt="News-4"></a>
+                </div>
+            </div>
+        </div>
 
 
-    <div class="lessons">
-        <p>Free Courses <span>></span></p>
+        <div class="lessons">
+            <p>Free Courses <span>></span></p>
 
-        <!--I HATE CARDS-->
+            <!--I HATE CARDS-->
 
-        <div class="course-grid">
-            <div onclick="window.location.href='https://www.google.com'" class="card" id="course1">
-                <img src="../img/design/course (1).png" alt="Course 1">
-                <h3>Power Electronics: Converters, Magnetics, and Control for Energy Systems</h3>
-                <p class="paragraph">This course covers modeling, analysis, design, control, and application of circuits for energy conversion and control.</p>
-                <p class="teacher">Instructor: Prof. Dave Perreault</p>
-                <p class="school">Massachusetts Institute of Technology</p>
-            </div>
-            <div class="card" id="course2">
-                <img src="../img/design/course (2).png" alt="Course 2">
-                <h3>Direct Solar/Thermal To Electrical Energy Conversion Technologies</h3>
-                <p class="paragraph">This course introduces principles and technologies for converting heat into electricity via solid-state devices.</p>
-                <p class="teacher">Instructor: Prof. Gang Chen</p>
-                <p class="school">Massachusetts Institute of Technology</p>
-            </div>
-            <div class="card" id="course3">
-                <img src="../img/design/course (3).png" alt="Course 3">
-                <h3>Introduction to Computer Science and Programming Using Python</h3>
-                <p class="paragraph">This subject is aimed at students with little to no programming experience. It aims to provide students with an understanding of the role computation can play in solving problems.</p>
-                <p class="teacher">Instructor: Dr. Ana Bell</p>
-                <p class="school">Massachusetts Institute of Technology</p>
-            </div>
-            <div class="card" id="course4">
-                <img src="../img/design/course (4).png" alt="Course 4">
-                <h3>Hardware Acceleration via FPGA</h3>
-                <p class="paragraph">This course deals with hardware accelerators and system-on-chip designs using FPGAs.</p>
-                <p class="teacher">Instructor: Prof. Hunter Adams</p>
-                <p class="school">Cornell University</p>
-            </div>
-            <div class="card" id="course5">
-                <img src="../img/design/course (5).png" alt="Course 5">
-                <h3>Electronic Feedback System</h3>
-                <p class="paragraph">Feedback control is an important technique that is used in many modern electronic and electromechanical systems. The successful inclusion of this technique improves performance, reliability, and cost effectiveness of many designs.</p>
-                <p class="teacher">Instructor: James Roberge</p>
-                <p class="school">Massachusetts Institute of Technology</p>
-            </div>
-            <div class="card" id="course6">
-                <img src="../img/design/course (6).png" alt="Course 6">
-                <h3>Machine Vision</h3>
-                <p class="paragraph">This course is an introduction to the process of generating a symbolic description of the environment from an image. It covers the physics of image formation, image analysis, binary image processing, and filtering.</p>
-                <p class="teacher">Instructor: Prof. Berthold Horn</p>
-                <p class="school">Massachusetts Institute of Technology</p>
-            </div>
-        </div>      
-    </div>
+            <div class="course-grid">
+                <div onclick="window.location.href='https://www.google.com'" class="card" id="course1">
+                    <img src="../img/design/course (1).png" alt="Course 1">
+                    <h3>Power Electronics: Converters, Magnetics, and Control for Energy Systems</h3>
+                    <p class="paragraph">This course covers modeling, analysis, design, control, and application of circuits for energy conversion and control.</p>
+                    <p class="teacher">Instructor: Prof. Dave Perreault</p>
+                    <p class="school">Massachusetts Institute of Technology</p>
+                </div>
+                <div class="card" id="course2">
+                    <img src="../img/design/course (2).png" alt="Course 2">
+                    <h3>Direct Solar/Thermal To Electrical Energy Conversion Technologies</h3>
+                    <p class="paragraph">This course introduces principles and technologies for converting heat into electricity via solid-state devices.</p>
+                    <p class="teacher">Instructor: Prof. Gang Chen</p>
+                    <p class="school">Massachusetts Institute of Technology</p>
+                </div>
+                <div class="card" id="course3">
+                    <img src="../img/design/course (3).png" alt="Course 3">
+                    <h3>Introduction to Computer Science and Programming Using Python</h3>
+                    <p class="paragraph">This subject is aimed at students with little to no programming experience. It aims to provide students with an understanding of the role computation can play in solving problems.</p>
+                    <p class="teacher">Instructor: Dr. Ana Bell</p>
+                    <p class="school">Massachusetts Institute of Technology</p>
+                </div>
+                <div class="card" id="course4">
+                    <img src="../img/design/course (4).png" alt="Course 4">
+                    <h3>Hardware Acceleration via FPGA</h3>
+                    <p class="paragraph">This course deals with hardware accelerators and system-on-chip designs using FPGAs.</p>
+                    <p class="teacher">Instructor: Prof. Hunter Adams</p>
+                    <p class="school">Cornell University</p>
+                </div>
+                <div class="card" id="course5">
+                    <img src="../img/design/course (5).png" alt="Course 5">
+                    <h3>Electronic Feedback System</h3>
+                    <p class="paragraph">Feedback control is an important technique that is used in many modern electronic and electromechanical systems. The successful inclusion of this technique improves performance, reliability, and cost effectiveness of many designs.</p>
+                    <p class="teacher">Instructor: James Roberge</p>
+                    <p class="school">Massachusetts Institute of Technology</p>
+                </div>
+                <div class="card" id="course6">
+                    <img src="../img/design/course (6).png" alt="Course 6">
+                    <h3>Machine Vision</h3>
+                    <p class="paragraph">This course is an introduction to the process of generating a symbolic description of the environment from an image. It covers the physics of image formation, image analysis, binary image processing, and filtering.</p>
+                    <p class="teacher">Instructor: Prof. Berthold Horn</p>
+                    <p class="school">Massachusetts Institute of Technology</p>
+                </div>
+            </div>      
+        </div>
 
+
+    </main>
+   
     <div id="cirqon-footer-placeholder"></div>  
     
 </body>

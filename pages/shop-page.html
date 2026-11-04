@@ -24,222 +24,223 @@
     <div id="cirqon-cart-placeholder"></div>
     <div id="cirqon-storenav-placeholder"></div>
 
-
-    <div class="components">
-        <div class="buttons">
-            <button class="selected" onclick="showCategory('diodes', this)">Diodes</button>
-            <button onclick="showCategory('resistors', this)">Resistors</button>
-            <button onclick="showCategory('capacitors', this)">Capacitors</button>
-            <button onclick="showCategory('transistors', this)">Transistors</button>
-            <button onclick="showCategory('microchips', this)">Microchips</button>
-            <button onclick="showCategory('inductors', this)">Inductors</button>
-            <button onclick="showCategory('logic-gates', this)">Logic Gates</button>
-            <button onclick="showCategory('microcontrollers', this)">Microcontrollers</button>
-        </div>
-
-        <p class="show-more">Show more &#8595;</p>
-    </div>
-
-
-
-<div class="category-display">
-
-    <!-- DIODES -->
-    <div id="diodes" class="category-content">
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showDiodeType('general', this)">General Purpose</button>
-                <button onclick="showDiodeType('zener', this)">Zener</button>
-                <button onclick="showDiodeType('schottky', this)">Schottky</button>
-                <button onclick="showDiodeType('rectifier', this)">Rectifier</button>
-                <button onclick="showDiodeType('photodiode', this)">Photodiode</button>
-                <button onclick="showDiodeType('laser', this)">Laser Diode</button>
+    <main class="shop-page">
+        <div class="components">
+            <div class="buttons">
+                <button class="selected" onclick="showCategory('diodes', this)">Diodes</button>
+                <button onclick="showCategory('resistors', this)">Resistors</button>
+                <button onclick="showCategory('capacitors', this)">Capacitors</button>
+                <button onclick="showCategory('transistors', this)">Transistors</button>
+                <button onclick="showCategory('microchips', this)">Microchips</button>
+                <button onclick="showCategory('inductors', this)">Inductors</button>
+                <button onclick="showCategory('logic-gates', this)">Logic Gates</button>
+                <button onclick="showCategory('microcontrollers', this)">Microcontrollers</button>
             </div>
 
-            <hr>
-
-            <div id="general" class="diode-type"><div id="general-products"></div></div>
-            <div id="zener" class="diode-type" hidden><div id="zener-products"></div></div>
-            <div id="schottky" class="diode-type" hidden><div id="schottky-products"></div></div>
-            <div id="rectifier" class="diode-type" hidden><div id="rectifier-products"></div></div>
-            <div id="photodiode" class="diode-type" hidden><div id="photodiode-products"></div></div>
-            <div id="laser" class="diode-type" hidden><div id="laser-products"></div></div>
-            <div class="example-product-placeholder"></div>
+            <p class="show-more">Show more &#8595;</p>
         </div>
-    </div>
 
-    <!-- RESISTORS -->
-    <div id="resistors" class="category-content" hidden>
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showResistorType('carbon', this)">Carbon-Film</button>
-                <button onclick="showResistorType('metal', this)">Metal-Film</button>
-                <button onclick="showResistorType('variable', this)">Variable</button>
-                <button onclick="showResistorType('wire', this)">Wire wound</button>
-                <button onclick="showResistorType('mount', this)">Surface Mount</button>
-                <button onclick="showResistorType('array', this)">Resistor Array</button>
+
+
+        <div class="category-display">
+
+            <!-- DIODES -->
+            <div id="diodes" class="category-content">
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showDiodeType('general', this)">General Purpose</button>
+                        <button onclick="showDiodeType('zener', this)">Zener</button>
+                        <button onclick="showDiodeType('schottky', this)">Schottky</button>
+                        <button onclick="showDiodeType('rectifier', this)">Rectifier</button>
+                        <button onclick="showDiodeType('photodiode', this)">Photodiode</button>
+                        <button onclick="showDiodeType('laser', this)">Laser Diode</button>
+                    </div>
+
+                    <hr>
+
+                    <div id="general" class="diode-type"><div id="general-products"></div></div>
+                    <div id="zener" class="diode-type" hidden><div id="zener-products"></div></div>
+                    <div id="schottky" class="diode-type" hidden><div id="schottky-products"></div></div>
+                    <div id="rectifier" class="diode-type" hidden><div id="rectifier-products"></div></div>
+                    <div id="photodiode" class="diode-type" hidden><div id="photodiode-products"></div></div>
+                    <div id="laser" class="diode-type" hidden><div id="laser-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
             </div>
 
-            <hr>
-            <div id="carbon" class="resistor-type"><div id="carbon-products"></div></div>
-            <div id="metal" class="resistor-type" hidden><div id="metal-products"></div></div>
-            <div id="variable" class="resistor-type" hidden><div id="variable-products"></div></div>
-            <div id="wire" class="resistor-type" hidden><div id="wire-products"></div></div>
-            <div id="mount" class="resistor-type" hidden><div id="mount-products"></div></div>
-            <div id="array" class="resistor-type" hidden><div id="array-products"></div></div>
-            <div class="example-product-placeholder"></div>
+            <!-- RESISTORS -->
+            <div id="resistors" class="category-content" hidden>
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showResistorType('carbon', this)">Carbon-Film</button>
+                        <button onclick="showResistorType('metal', this)">Metal-Film</button>
+                        <button onclick="showResistorType('variable', this)">Variable</button>
+                        <button onclick="showResistorType('wire', this)">Wire wound</button>
+                        <button onclick="showResistorType('mount', this)">Surface Mount</button>
+                        <button onclick="showResistorType('array', this)">Resistor Array</button>
+                    </div>
 
-        </div>
-    </div>
-                
+                    <hr>
+                    <div id="carbon" class="resistor-type"><div id="carbon-products"></div></div>
+                    <div id="metal" class="resistor-type" hidden><div id="metal-products"></div></div>
+                    <div id="variable" class="resistor-type" hidden><div id="variable-products"></div></div>
+                    <div id="wire" class="resistor-type" hidden><div id="wire-products"></div></div>
+                    <div id="mount" class="resistor-type" hidden><div id="mount-products"></div></div>
+                    <div id="array" class="resistor-type" hidden><div id="array-products"></div></div>
+                    <div class="example-product-placeholder"></div>
 
-    <!-- CAPACITORS -->
-    <div id="capacitors" class="category-content" hidden>
-        <div class="store-display">
-
-            <div class="displayed-nav">
-                <button class="selected" onclick="showCapacitorType('ceramic', this)">Ceramic</button>
-                <button onclick="showCapacitorType('electrolytic', this)">Electrolytic</button>
-                <button onclick="showCapacitorType('c-variable', this)">Variable</button>
-                <button onclick="showCapacitorType('supercapacitor', this)">Supercapacitor</button>
-                <button onclick="showCapacitorType('film', this)">Film</button>
-                <button onclick="showCapacitorType('tantalum', this)">Tantalum</button>
+                </div>
             </div>
-
-            <hr>
-            <div id="ceramic" class="capacitor-type"><div id="ceramic-products"></div></div>
-            <div id="electrolytic" class="capacitor-type" hidden><div id="electrolytic-products"></div></div>
-            <div id="c-variable" class="capacitor-type" hidden><div id="c-variable-products"></div></div>
-            <div id="supercapacitor" class="capacitor-type" hidden><div id="supercapacitor-products"></div></div>
-            <div id="film" class="capacitor-type" hidden><div id="film-products"></div></div>
-            <div id="tantalum" class="capacitor-type" hidden><div id="tantalum-products"></div></div>
-            <div class="example-product-placeholder"></div>
-        </div>
-    </div>
-
-    <!-- TRANSISTORS -->
-    <div id="transistors" class="category-content" hidden>
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showTransistorType('bipolar', this)">Bipolar junction</button>
-                <button onclick="showTransistorType('jfet', this)">JFET</button>
-                <button onclick="showTransistorType('mosfet', this)">MOSFET</button>
-                <button onclick="showTransistorType('phototransistor', this)">Phototransistor</button>
-                <button onclick="showTransistorType('igbt', this)">IGBT</button>
-                <button onclick="showTransistorType('power', this)">Power Transistor</button>
-            </div>
-
-            <hr>
-
-            <div id="bipolar" class="transistor-type"><div id="bipolar-products"></div></div>
-            <div id="jfet" class="transistor-type" hidden><div id="jfet-products"></div></div>
-            <div id="mosfet" class="transistor-type" hidden><div id="mosfet-products"></div></div>
-            <div id="phototransistor" class="transistor-type" hidden><div id="phototransistor-products"></div></div>
-            <div id="igbt" class="transistor-type" hidden><div id="igbt-products"></div></div>
-            <div id="power" class="transistor-type" hidden><div id="power-products"></div></div>
-            <div class="example-product-placeholder"></div>
-        </div>
-    </div>
-
-    <!-- MICROCHIPS -->
-    <div id="microchips" class="category-content" hidden>
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showMicrochipsType('logic', this)">Logic Chip</button>
-                <button onclick="showMicrochipsType('memory', this)">Memory Chip</button>
-                <button onclick="showMicrochipsType('asic', this)">ASIC</button>
-                <button onclick="showMicrochipsType('soc', this)">SoC</button>
-                <button onclick="showMicrochipsType('analog', this)">Analog Chip</button>
-                <button onclick="showMicrochipsType('digital', this)">Digital Chip</button>
-            </div>
-
-            <hr>
-
-            <div id="logic" class="microchip-type"><div id="logic-products"></div></div>
-            <div id="memory" class="microchip-type" hidden><div id="memory-products"></div></div>
-            <div id="asic" class="microchip-type" hidden><div id="asic-products"></div></div>
-            <div id="soc" class="microchip-type" hidden><div id="soc-products"></div></div>
-            <div id="analog" class="microchip-type" hidden><div id="analog-products"></div></div>
-            <div id="digital" class="microchip-type" hidden><div id="digital-products"></div></div>
-            <div class="example-product-placeholder"></div>
-        </div>
-    </div>
-
-    <!-- INDUCTORS -->
-    <div id="inductors" class="category-content" hidden>
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showInductorType('wound', this)">Wire-wound</button>
-                <button onclick="showInductorType('multilayer', this)">Multilayer</button>
-                <button onclick="showInductorType('radio', this)">Radio-frequency</button>
-                <button onclick="showInductorType('i-variable', this)">Variable</button>
-                <button onclick="showInductorType('choke', this)">Choke Inductor</button>
-                <button onclick="showInductorType('coupled', this)">Coupled Inductor</button>
-            </div>
-
-            <hr>
-
-            <div id="wound" class="inductor-type"><div id="wound-products"></div></div>
-            <div id="multilayer" class="inductor-type" hidden><div id="multilayer-products"></div></div>
-            <div id="radio" class="inductor-type" hidden><div id="radio-products"></div></div>
-            <div id="i-variable" class="inductor-type" hidden><div id="i-variable-products"></div></div>
-            <div id="choke" class="inductor-type" hidden><div id="choke-products"></div></div>
-            <div id="coupled" class="inductor-type" hidden><div id="coupled-products"></div></div>
-            <div class="example-product-placeholder"></div>
-        </div>
-    </div>
-
-    <!-- LOGIC GATES -->
-    <div id="logic-gates" class="category-content" hidden>
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showLogicType('cmos', this)">CMOS</button>
-                <button onclick="showLogicType('nmos', this)">NMOS</button>
-                <button onclick="showLogicType('pmos', this)">PMOS</button>
-                <button onclick="showLogicType('ttl', this)">TTL</button>
-                <button onclick="showLogicType('cml', this)">CML</button>
-                <button onclick="showLogicType('ecl', this)">ECL</button>
-            </div>
-
-            <hr>
-
-            <div id="cmos" class="logic-type"><div id="cmos-products"></div></div>
-            <div id="nmos" class="logic-type" hidden><div id="nmos-products"></div></div>
-            <div id="pmos" class="logic-type" hidden><div id="pmos-products"></div></div>
-            <div id="ttl" class="logic-type" hidden><div id="ttl-products"></div></div>
-            <div id="cml" class="logic-type" hidden><div id="cml-products"></div></div>
-            <div id="ecl" class="logic-type" hidden><div id="ecl-products"></div></div>
-            <div class="example-product-placeholder"></div>
-        </div>
-    </div>
                         
-    <!-- MICROCONTROLLERS -->
-    <div id="microcontrollers" class="category-content" hidden>
-        <div class="store-display">
-            <div class="displayed-nav">
-                <button class="selected" onclick="showMicrocontrollerType('arm', this)">ARM</button>
-                <button onclick="showMicrocontrollerType('pic', this)">PIC</button>
-                <button onclick="showMicrocontrollerType('avr', this)">AVR</button>
-                <button onclick="showMicrocontrollerType('esp', this)">ESP32/ESP8266</button>
-                <button onclick="showMicrocontrollerType('rp', this)">RP2040</button>
-                <button onclick="showMicrocontrollerType('stm', this)">STM32</button>
+
+            <!-- CAPACITORS -->
+            <div id="capacitors" class="category-content" hidden>
+                <div class="store-display">
+
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showCapacitorType('ceramic', this)">Ceramic</button>
+                        <button onclick="showCapacitorType('electrolytic', this)">Electrolytic</button>
+                        <button onclick="showCapacitorType('c-variable', this)">Variable</button>
+                        <button onclick="showCapacitorType('supercapacitor', this)">Supercapacitor</button>
+                        <button onclick="showCapacitorType('film', this)">Film</button>
+                        <button onclick="showCapacitorType('tantalum', this)">Tantalum</button>
+                    </div>
+
+                    <hr>
+                    <div id="ceramic" class="capacitor-type"><div id="ceramic-products"></div></div>
+                    <div id="electrolytic" class="capacitor-type" hidden><div id="electrolytic-products"></div></div>
+                    <div id="c-variable" class="capacitor-type" hidden><div id="c-variable-products"></div></div>
+                    <div id="supercapacitor" class="capacitor-type" hidden><div id="supercapacitor-products"></div></div>
+                    <div id="film" class="capacitor-type" hidden><div id="film-products"></div></div>
+                    <div id="tantalum" class="capacitor-type" hidden><div id="tantalum-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
             </div>
 
-            <hr>
+            <!-- TRANSISTORS -->
+            <div id="transistors" class="category-content" hidden>
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showTransistorType('bipolar', this)">Bipolar junction</button>
+                        <button onclick="showTransistorType('jfet', this)">JFET</button>
+                        <button onclick="showTransistorType('mosfet', this)">MOSFET</button>
+                        <button onclick="showTransistorType('phototransistor', this)">Phototransistor</button>
+                        <button onclick="showTransistorType('igbt', this)">IGBT</button>
+                        <button onclick="showTransistorType('power', this)">Power Transistor</button>
+                    </div>
 
-            <div id="arm" class="microcontroller-type"><div id="arm-products"></div></div>
-            <div id="pic" class="microcontroller-type" hidden><div id="pic-products"></div></div>
-            <div id="avr" class="microcontroller-type" hidden><div id="avr-products"></div></div>
-            <div id="esp" class="microcontroller-type" hidden><div id="esp-products"></div></div>
-            <div id="rp" class="microcontroller-type" hidden><div id="rp-products"></div></div>
-            <div id="stm" class="microcontroller-type" hidden><div id="stm-products"></div></div>
-            <div class="example-product-placeholder"></div>
+                    <hr>
+
+                    <div id="bipolar" class="transistor-type"><div id="bipolar-products"></div></div>
+                    <div id="jfet" class="transistor-type" hidden><div id="jfet-products"></div></div>
+                    <div id="mosfet" class="transistor-type" hidden><div id="mosfet-products"></div></div>
+                    <div id="phototransistor" class="transistor-type" hidden><div id="phototransistor-products"></div></div>
+                    <div id="igbt" class="transistor-type" hidden><div id="igbt-products"></div></div>
+                    <div id="power" class="transistor-type" hidden><div id="power-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
+            </div>
+
+            <!-- MICROCHIPS -->
+            <div id="microchips" class="category-content" hidden>
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showMicrochipsType('logic', this)">Logic Chip</button>
+                        <button onclick="showMicrochipsType('memory', this)">Memory Chip</button>
+                        <button onclick="showMicrochipsType('asic', this)">ASIC</button>
+                        <button onclick="showMicrochipsType('soc', this)">SoC</button>
+                        <button onclick="showMicrochipsType('analog', this)">Analog Chip</button>
+                        <button onclick="showMicrochipsType('digital', this)">Digital Chip</button>
+                    </div>
+
+                    <hr>
+
+                    <div id="logic" class="microchip-type"><div id="logic-products"></div></div>
+                    <div id="memory" class="microchip-type" hidden><div id="memory-products"></div></div>
+                    <div id="asic" class="microchip-type" hidden><div id="asic-products"></div></div>
+                    <div id="soc" class="microchip-type" hidden><div id="soc-products"></div></div>
+                    <div id="analog" class="microchip-type" hidden><div id="analog-products"></div></div>
+                    <div id="digital" class="microchip-type" hidden><div id="digital-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
+            </div>
+
+            <!-- INDUCTORS -->
+            <div id="inductors" class="category-content" hidden>
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showInductorType('wound', this)">Wire-wound</button>
+                        <button onclick="showInductorType('multilayer', this)">Multilayer</button>
+                        <button onclick="showInductorType('radio', this)">Radio-frequency</button>
+                        <button onclick="showInductorType('i-variable', this)">Variable</button>
+                        <button onclick="showInductorType('choke', this)">Choke Inductor</button>
+                        <button onclick="showInductorType('coupled', this)">Coupled Inductor</button>
+                    </div>
+
+                    <hr>
+
+                    <div id="wound" class="inductor-type"><div id="wound-products"></div></div>
+                    <div id="multilayer" class="inductor-type" hidden><div id="multilayer-products"></div></div>
+                    <div id="radio" class="inductor-type" hidden><div id="radio-products"></div></div>
+                    <div id="i-variable" class="inductor-type" hidden><div id="i-variable-products"></div></div>
+                    <div id="choke" class="inductor-type" hidden><div id="choke-products"></div></div>
+                    <div id="coupled" class="inductor-type" hidden><div id="coupled-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
+            </div>
+
+            <!-- LOGIC GATES -->
+            <div id="logic-gates" class="category-content" hidden>
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showLogicType('cmos', this)">CMOS</button>
+                        <button onclick="showLogicType('nmos', this)">NMOS</button>
+                        <button onclick="showLogicType('pmos', this)">PMOS</button>
+                        <button onclick="showLogicType('ttl', this)">TTL</button>
+                        <button onclick="showLogicType('cml', this)">CML</button>
+                        <button onclick="showLogicType('ecl', this)">ECL</button>
+                    </div>
+
+                    <hr>
+
+                    <div id="cmos" class="logic-type"><div id="cmos-products"></div></div>
+                    <div id="nmos" class="logic-type" hidden><div id="nmos-products"></div></div>
+                    <div id="pmos" class="logic-type" hidden><div id="pmos-products"></div></div>
+                    <div id="ttl" class="logic-type" hidden><div id="ttl-products"></div></div>
+                    <div id="cml" class="logic-type" hidden><div id="cml-products"></div></div>
+                    <div id="ecl" class="logic-type" hidden><div id="ecl-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
+            </div>
+                                
+            <!-- MICROCONTROLLERS -->
+            <div id="microcontrollers" class="category-content" hidden>
+                <div class="store-display">
+                    <div class="displayed-nav">
+                        <button class="selected" onclick="showMicrocontrollerType('arm', this)">ARM</button>
+                        <button onclick="showMicrocontrollerType('pic', this)">PIC</button>
+                        <button onclick="showMicrocontrollerType('avr', this)">AVR</button>
+                        <button onclick="showMicrocontrollerType('esp', this)">ESP32/ESP8266</button>
+                        <button onclick="showMicrocontrollerType('rp', this)">RP2040</button>
+                        <button onclick="showMicrocontrollerType('stm', this)">STM32</button>
+                    </div>
+
+                    <hr>
+
+                    <div id="arm" class="microcontroller-type"><div id="arm-products"></div></div>
+                    <div id="pic" class="microcontroller-type" hidden><div id="pic-products"></div></div>
+                    <div id="avr" class="microcontroller-type" hidden><div id="avr-products"></div></div>
+                    <div id="esp" class="microcontroller-type" hidden><div id="esp-products"></div></div>
+                    <div id="rp" class="microcontroller-type" hidden><div id="rp-products"></div></div>
+                    <div id="stm" class="microcontroller-type" hidden><div id="stm-products"></div></div>
+                    <div class="example-product-placeholder"></div>
+                </div>
+            </div>
         </div>
-    </div>
 
+    </main>
 
-
-</div>
+    
 
     <div id="cirqon-footer-placeholder"></div>   
 
